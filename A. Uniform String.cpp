@@ -27,6 +27,28 @@ int main()
     string s;
 
 
+    cin>>t;
+
+    while(t--)
+    {
+        char ch='a';
+            cin>>n>>a;
+            char gh=97+a;
+
+
+
+            for(ll i=0;i<n;i++){
+                cout<<ch++;
+                if(ch==gh)
+                    ch='a';
+            }
+
+            cout<<endl;
+
+    }
+
+
+
 
 
 

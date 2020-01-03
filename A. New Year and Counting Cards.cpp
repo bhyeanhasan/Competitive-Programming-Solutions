@@ -12,7 +12,6 @@
 #define vc vector<ll>
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
-#define fr(i,n) for(ll i=0;i<n;i++)
 
 
 using namespace std;
@@ -26,7 +25,17 @@ int main()
     bool is;
     string s;
 
+    cin>>s;
 
+    for(i=0;i<s.size();i++)
+    {
+        if(s[i]=='a'|| s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u')
+            count++;
+        if(s[i]=='1'|| s[i]=='3' || s[i]=='5' || s[i]=='7' || s[i]=='9')
+            count++;
+    }
+
+    cout<<count;
 
 
 

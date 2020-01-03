@@ -22,13 +22,50 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    ll a,b,c,d,n,count=0,sum=0,result,j,k;
     bool is;
     string s;
 
+    cin>>n>>c;
+    ll p[n],t[n];
+
+    fr(i,n)
+    cin>>p[i];
+
+    fr(i,n)
+    cin>>t[i];
+
+    j=0;
+    fr(i,n)
+    {
+        j+=t[i];
+        d=p[i]-c*j;
+
+        if(d<0)
+            d=0;
+        count+=d;
+
+    }
+    j=0;
+
+    for(ll i=n-1;i>=0;i--)
+    {
+                j+=t[i];
+
+        d=p[i]-c*j;
+        if(d<0)
+            d=0;
+        sum+=d;
+    }
 
 
 
+    if(count>sum)
+        cout<<"Limak";
+    else if(count<sum)
+        cout<<"Radewoosh";
+    else
+        cout<<"Tie";
 
 
     return 0;

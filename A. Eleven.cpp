@@ -24,11 +24,27 @@ int main()
 
     ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
     bool is;
-    string s;
+    string s="";
+
+    cin>>n;
+
+    for(ll i=0;i<n;i++)
+    {
+        s.push_back('o');
+    }
+
+    ll x=1,y=1;
+
+    while(y<=n)
+    {
+        s[y-1]='O';
+        t=y;
+        y+=x;
+        x=t;
+    }
 
 
-
-
+    cout<<s<<endl;
 
 
     return 0;

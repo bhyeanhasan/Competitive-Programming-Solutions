@@ -26,9 +26,33 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
 
+    string arr[n];
 
+    for(i=0;i<n;i++)
+        cin>>arr[i];
 
+    set<ll> st;
+
+    for(i=0;i<n;i++)
+    {
+        st.insert(arr[i]);
+    }
+
+    int cn[st.size()];
+
+    for(auto x = st.begin(); x!= st.end();x++)
+    {
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]== *x)
+            {
+                cn[count]++;
+            }
+        }
+        count++;
+    }
 
 
     return 0;

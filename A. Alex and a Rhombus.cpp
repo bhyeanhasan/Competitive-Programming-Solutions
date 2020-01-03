@@ -22,13 +22,20 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    ll a,b,c,d,n,count=0,sum=0,result,j,k;
     bool is;
     string s;
 
+    cin>>n;
 
+    for(ll i=1;i<2*n-1;i+=2)
+    {
+        count+=i;
+    }
 
+    count=((2*n)-1)+count*2;
 
+    cout<<count<<endl;
 
 
     return 0;

@@ -15,40 +15,35 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,m,count=0,xx,x=1,a,b;
+    ll n,m,count=0,xx,x=1,a,b,i;
 
     cin>>n>>m;
 
     ll arr[n];
 
-    for(ll i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         cin>>arr[i];
     }
 
-    for(ll i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        if(x==1)
-        {
-            if(arr[i]<=m)
-                count++;
-            else
-                break;
-
-                x=0;
+        if(arr[i]<=m)
+            count++;
+        else{
+            xx=i;
+            break;
         }
 
-        else if(x==0)
-        {
-            if(arr[n-1-i]<=m)
-                count++;
-            else
-                break;
-
-                x=1;
-        }
     }
 
+    for(i=n-1;i>=xx;i--)
+    {
+        if(arr[i]<=m)
+            count++;
+        else
+            break;
+    }
     cout<<count;
 
     return 0;

@@ -24,7 +24,24 @@ int main()
 
     ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
     bool is;
-    string s;
+    string s,p,w;
+
+    cin>>s>>p>>w;
+    for(i=0;i<w.size();i++)
+    {
+        int x=s.find(w[i]);
+        if(x!=-1)
+        {
+            w[i]=p[x];
+        }
+        if(w[i]>='A' && w[i]<='Z')
+        {
+            x=s.find(w[i]+32);
+            w[i]=p[x];
+            w[i]=w[i]-32;
+        }
+    }
+    cout<<w<<endl;
 
 
 
@@ -33,4 +50,5 @@ int main()
 
     return 0;
 }
+
 

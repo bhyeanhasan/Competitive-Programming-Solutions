@@ -26,9 +26,25 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
 
+    ll arr[3];
 
+    for(i=0;i<3;i++)
+        cin>>arr[i];
 
+    sort(arr,arr+3);
+
+    count+=n/arr[0];
+    n=n%arr[0];
+
+    count+=n/arr[1];
+    n=n%arr[1];
+
+    count+=n/arr[2];
+    n=n%arr[2];
+
+    cout<<count<<endl;
 
 
     return 0;

@@ -27,6 +27,31 @@ int main()
     string s;
 
 
+    cin>>t>>n;
+
+    ll arr[t];
+
+    fr(i,t)
+    {
+        cin>>arr[i];
+    }
+
+    sort(arr,arr+t,greater<ll>());
+
+    fr(i,t)
+    {
+        sum+=arr[i];
+        count++;
+        if(sum>=n)
+        {
+            break;
+        }
+    }
+
+    cout<<count;
+
+
+
 
 
 

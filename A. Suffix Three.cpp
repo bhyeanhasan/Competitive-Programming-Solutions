@@ -26,8 +26,20 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
 
+    while(n--)
+    {
+        cin>>s;
+        a=s.size();
+        if(s[a-1]=='o')
+            cout<<"FILIPINO"<<endl;
+        else if(s[a-1]=='u')
+            cout<<"JAPANESE"<<endl;
+            else
+                cout<<"KOREAN"<<endl;
 
+    }
 
 
 

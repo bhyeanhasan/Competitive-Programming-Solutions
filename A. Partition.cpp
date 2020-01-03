@@ -10,10 +10,9 @@
 #define ll long long int
 #define pi acos(-1)
 #define vc vector<ll>
-#define in(a) scanf("%d",&a)
+#define in(a) scanf("%lld",&a)
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
-
 
 using namespace std;
 
@@ -27,10 +26,23 @@ int main()
     string s;
 
 
+   in(n);
+   while(n--)
+   {
+       in(a);
+
+       if(a<0)
+        sum+=a;
+       else
+        count+=a;
 
 
+   }
+
+    cout<<count-sum;
 
 
     return 0;
 }
+
 

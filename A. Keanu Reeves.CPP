@@ -22,10 +22,34 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k,frag=1;
     bool is;
     string s;
+    cin>>n;
+    cin>>s;
 
+    for(i=0;i<n;i++)
+    {
+        if(s[i]=='1')
+        {
+            count++;
+        }
+        else
+            sum++;
+    }
+
+    if(sum == count)
+    {
+        cout<<2<<endl;
+        cout<<s[0];
+        s.erase(s.begin());
+        cout<<" "<<s<<endl;
+    }
+    else
+    {
+        cout<<1<<endl;
+        cout<<s<<endl;
+    }
 
 
 

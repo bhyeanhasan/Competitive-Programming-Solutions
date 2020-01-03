@@ -26,11 +26,31 @@ int main()
     bool is;
     string s;
 
+    cin>>t;
 
+    while(t--)
+    {
+        cin>>a>>b;
 
+        c=abs(a-b);
 
+        i=c/5;
+        c=c-(i*5);
+        count+=i;
+        i=c/2;
+        c=c-(i*2);
+        count+=i;
+        i=c/1;
+        c=c-(i*1);
+        count+=i;
+
+        cout<<count<<endl;
+        count=0;
+
+    }
 
 
     return 0;
 }
+
 

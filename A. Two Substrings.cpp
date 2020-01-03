@@ -26,10 +26,39 @@ int main()
     bool is;
     string s;
 
+    cin>>s;
 
+    string str=s;
 
+    int f1=s.find("AB");
+    if(f1 != -1)
+    {
+        s=s.substr(f1+2);
+        int f2= s.find("BA");
 
+        if(f2 != -1)
+        {
+            cout<<"YES"<<endl;
+            return 0;
+        }
 
+    }
+
+    int f=str.find("BA");
+    if(f != -1)
+    {
+        str=str.substr(f+2);
+         int f3= str.find("AB");
+
+        if(f3 != -1)
+        {
+            cout<<"YES"<<endl;
+            return 0;
+        }
+
+    }
+
+    cout<<"NO"<<endl;
 
     return 0;
 }

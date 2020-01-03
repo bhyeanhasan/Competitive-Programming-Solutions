@@ -12,7 +12,6 @@
 #define vc vector<ll>
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
-#define fr(i,n) for(ll i=0;i<n;i++)
 
 
 using namespace std;
@@ -22,10 +21,19 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    int a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
     bool is;
     string s;
 
+    cin>>a>>b>>c;
+
+    for(i=b;i<=c;i+=b)
+    {
+        if(i%a==0)
+            count++;
+    }
+
+    cout<<count<<endl;
 
 
 

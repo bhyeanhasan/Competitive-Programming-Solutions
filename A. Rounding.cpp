@@ -10,10 +10,9 @@
 #define ll long long int
 #define pi acos(-1)
 #define vc vector<ll>
-#define in(a) scanf("%d",&a)
+#define in(a) scanf("%lld",&a)
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
-
 
 using namespace std;
 
@@ -27,10 +26,18 @@ int main()
     string s;
 
 
+    in(n);
+
+    if(n%10<5)
+    n=n-(n%10);
+    else
+        n=n+(10-(n%10));
+    cout<<n;
 
 
 
 
     return 0;
 }
+
 

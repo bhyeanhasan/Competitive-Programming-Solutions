@@ -26,11 +26,35 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
+    ll arr[n];
 
+    for(ll i=0;i<n;i++)
+        cin>>arr[i];
 
-
-
+    for(ll i=n-1;i>=0;i--)
+    {
+        for(ll j=i-1;j>=0;j--)
+        {
+            if(arr[i]==arr[j])
+            {
+                arr[j]=0;
+            }
+        }
+    }
+    for(ll i=0;i<n;i++)
+    {
+        if(arr[i]!=0)
+             count++;
+    }
+    cout<<count<<endl;
+    for(ll i=0;i<n;i++)
+    {
+        if(arr[i]!=0)
+             cout<<arr[i]<<" ";
+    }
 
     return 0;
 }
+
 

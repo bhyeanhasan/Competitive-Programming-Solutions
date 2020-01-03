@@ -26,11 +26,16 @@ int main()
     bool is;
     string s;
 
+    cin>>t;
+    while(t--)
+    {
+        cin>>a>>b;
 
+        cout<<a<<" "<<2*a<<endl;
 
-
-
+    }
 
     return 0;
 }
+
 

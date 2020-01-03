@@ -26,11 +26,22 @@ int main()
     bool is;
     string s;
 
+    cin>>a>>b>>n;
 
+    for(i=0;i<n;i++)
+    {
+        sum+=(2*a)+(2*b)-4;
+        a-=4;
+        b-=4;
+
+    }
+
+    cout<<sum;
 
 
 
 
     return 0;
 }
+
 

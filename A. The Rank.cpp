@@ -7,10 +7,11 @@
 */
 
 #include<bits/stdc++.h>
-#define ll long long int
+#include <algorithm>
+#define ll int
 #define pi acos(-1)
 #define vc vector<ll>
-#define in(a) scanf("%d",&a)
+#define in(a) scanf("%lld",&a)
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
 
@@ -22,15 +23,36 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    ll a,b,c,d,n,m,t,count=0,sum=0,result,i,j,k;
     bool is;
     string s;
 
+    cin>>n;
+    ll arr[n];
 
+    for(i=0;i<n;i++)
+    {
+        cin>>a>>b>>c>>d;
+        arr[i]=a+b+c+d;
+
+    }
+    t=arr[0];
+
+    sort(arr, arr+n, greater<int>());
+
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==t)
+        {
+            cout<<i+1;
+            break;
+        }
+    }
 
 
 
 
     return 0;
 }
+
 

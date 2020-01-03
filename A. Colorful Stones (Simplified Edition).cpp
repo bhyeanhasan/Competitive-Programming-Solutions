@@ -22,15 +22,20 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    ll a,b,c,d,n,count=0,sum=0,result,i,j,k;
     bool is;
-    string s;
+    string s,t;
 
-
-
-
-
+    cin>>s>>t;
+    j=0;
+    for(ll i=0;i<t.size();i++)
+    {
+        if(t[i]==s[j])
+            j++;
+    }
+    cout<<j+1<<endl;
 
     return 0;
 }
+
 

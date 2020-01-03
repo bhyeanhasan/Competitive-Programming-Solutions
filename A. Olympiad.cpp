@@ -26,11 +26,31 @@ int main()
     bool is;
     string s;
 
+    vector<ll> v;
 
+    cin>>n;
+    while(n--)
+    {
+        cin>>a;
+        v.push_back(a);
+    }
 
+    sort(v.begin(),v.end());
 
+    for(i=0;i<v.size()-1;i++)
+    {
+        if(v[i]==0 || v[i]==v[i+1])
+        {
 
+            v.erase(v.begin()+i);
+            i--;
+
+        }
+    }
+
+    cout<<v.size()<<endl;
 
     return 0;
 }
+
 

@@ -26,11 +26,35 @@ int main()
     bool is;
     string s;
 
+    cin>>n>>t;
 
+    string arr[t],brr[t],lecture[n];
 
+    for(i=0;i<t;i++)
+    {
+        cin>>arr[i]>>brr[i];
+    }
 
+    for(i=0;i<n;i++)
+        cin>>lecture[i];
+
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<t;j++)
+        {
+            if(lecture[i]==arr[j])
+            {
+                if(arr[j].size()>brr[j].size())
+                    lecture[i]=brr[j];
+            }
+        }
+    }
+
+    for(i=0;i<n;i++)
+        cout<<lecture[i]<<" ";
 
 
     return 0;
 }
+
 

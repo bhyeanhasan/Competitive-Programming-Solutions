@@ -24,13 +24,36 @@ int main()
 
     ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
     bool is;
-    string s;
 
 
+    cin>>a>>b;
 
+    string s[b];
 
+    for(i=0;i<b;i++)
+    {
+        cin>>s[i];
+        sort(s[i].begin(),s[i].end);
+        s[i]==s;
+    }
 
+    for(i=0;i<b-1;i++)
+    {
+        if(s[i][0]=s[i+1][0])
+        {
+            count++;
+            if(count>sum)
+                sum=count;
+        }
+        else
+        {
+            count=0;
+        }
+    }
+
+    cout<<count<<endl;
 
     return 0;
 }
+
 

@@ -1,29 +1,30 @@
 #include<bits/stdc++.h>
+#define ll long long
 using namespace std;
 
 int main()
 {
-    int n,l;
+    ll n,l;
     cin>>n>>l;
-    int arr[n];
+    ll arr[n];
 
-    for(int i=0;i<n;i++)
+    for(ll i=0;i<n;i++)
         cin>>arr[i];
 
     sort(arr,arr+n);
 
-    int diff=0;
-    for(int i=1;i<n;i++)
+    ll diff=0;
+    for(ll i=1;i<n;i++)
     {
-        int d=arr[i]-arr[i-1];
+        ll d=arr[i]-arr[i-1];
         diff=max(diff,d);
 
     }
 
-    float p1=arr[0]-0;
-    float pn= l-arr[n-1];
+    double p1=(double)arr[0]-0;
+    double pn= (double)l-arr[n-1];
 
-    float res = diff*1.00/2;
+    double res =(double) diff*1.00/2;
 
     res=max(res,max(p1,pn));
 
