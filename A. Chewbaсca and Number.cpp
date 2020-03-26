@@ -27,11 +27,22 @@ int main()
     bool is;
     string s;
 
+cin>>s;
+    for(i=0;i<s.size();i++)
+    {
+        j = s[i]-'0';
+        if(j>4)
+        {
+            j=9-j;
+            cout<<j<<endl;
+        }
 
+    }
 
 
 
 
     return 0;
 }
+
 

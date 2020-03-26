@@ -13,6 +13,7 @@
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
+bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
 
 
 using namespace std;
@@ -22,28 +23,28 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll a,b,c,d,n,t,count=0,sum=0,result,i,j,k;
+    ll n,t,count=0,sum=0,Max=0,result,i,j,k;
     bool is;
+    string s;
 
+    cin>>t>>n;
 
-    cin>>a>>b;
+    string arr[n];
 
-    string s[b];
-
-    for(i=0;i<b;i++)
+    fr(i,n)
     {
-        cin>>s[i];
-        sort(s[i].begin(),s[i].end);
-        s[i]==s;
+        cin>>arr[i];
     }
 
-    for(i=0;i<b-1;i++)
+    fr(i,n)
     {
-        if(s[i][0]=s[i+1][0])
+        k=arr[i].find('0');
+
+        if(k!=std::string::npos)
         {
-            count++;
-            if(count>sum)
-                sum=count;
+            count+=1;
+            if(count>Max)
+                Max=count;
         }
         else
         {
@@ -51,7 +52,8 @@ int main()
         }
     }
 
-    cout<<count<<endl;
+    cout<<Max<<endl;
+
 
     return 0;
 }

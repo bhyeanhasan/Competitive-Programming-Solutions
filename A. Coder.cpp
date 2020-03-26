@@ -27,6 +27,27 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
+    if(n%2==0)
+        k=(n*n)/2;
+    else
+        k=((n*n)/2)+1;
+    cout<<k<<endl;
+
+    fr(i,n)
+    {
+        fr(j,n)
+        {
+            if(i%2==0 && j%2!=1)
+                cout<<"C";
+            else if( i%2!=0 && j%2==1)
+                cout<<"C";
+            else
+                cout<<".";
+        }
+
+        cout<<endl;
+    }
 
 
 
@@ -34,4 +55,5 @@ int main()
 
     return 0;
 }
+
 

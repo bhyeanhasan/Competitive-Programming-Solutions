@@ -24,14 +24,28 @@ int main()
     cin.tie(NULL);cout.tie(0);
 
     ll n,t,count=0,sum=0,result,i,j,k;
-    bool is;
-    string s;
+
+    cin>>t;
+
+    while(t--)
+    {
+
+    cin>>n;
+    set<ll> ss;
+
+
+        fr(j,n)
+        {
+            cin>>k;
+            ss.insert(k);
+        }
 
 
 
+    cout<<ss.size()<<endl;
 
 
-
+}
     return 0;
 }
 

@@ -24,13 +24,30 @@ int main()
     cin.tie(NULL);cout.tie(0);
 
     ll n,t,count=0,sum=0,result,i,j,k;
-    bool is;
+    bool is =true ;
     string s;
 
+    cin>>n>>k;
 
+    ll arr[n];
 
+    fr(i,n){
+        cin>>arr[i];
 
+        sum+=arr[i];
 
+    }
+
+    sort(arr,arr+n);
+
+    sum=sum-arr[n-1];
+
+    if(sum<=k)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+        cout<<"NO"<<endl;
 
     return 0;
 }

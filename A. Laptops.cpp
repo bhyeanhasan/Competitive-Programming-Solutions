@@ -23,10 +23,22 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
+    ll a,b,n,t,count=0,sum=0,result,i,j,k;
     bool is;
     string s;
 
+    cin>>n;
+
+    while(n--)
+    {
+        cin>>a>>b;
+        if(a<b)
+        {
+            cout<<"Happy Alex"<<endl;
+            return 0;
+        }
+    }
+    cout<<"Poor Alex"<<endl;
 
 
 
@@ -34,4 +46,5 @@ int main()
 
     return 0;
 }
+
 

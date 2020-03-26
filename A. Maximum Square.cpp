@@ -28,10 +28,33 @@ int main()
     string s;
 
 
+    cin>>t;
 
+    while(t--)
+    {
+        cin>>n;
+        ll arr[n];
+
+        fr(i,n)
+            cin>>arr[i];
+
+        sort(arr,arr+n);
+
+        for(i=arr[n-1];i>=0;i--)
+        {
+            if(arr[n-i]>=i)
+            {
+                cout<<i<<endl;
+                break;
+            }
+        }
+
+
+    }
 
 
 
     return 0;
 }
+
 

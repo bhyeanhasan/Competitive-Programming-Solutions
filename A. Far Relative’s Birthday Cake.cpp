@@ -23,9 +23,38 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
-    bool is;
-    string s;
+    int n,count=0;
+    cin>>n;
+    char ch[n+1][n+1];
+
+    for(int i=0;i<n+1;i++)
+    {
+        for(int j=0;j<n+1;j++)
+        {
+            if(i==0 || j==0)
+                ch[i][j]='0';
+            else
+            {
+                cin>>ch[i][j];
+            }
+        }
+    }
+
+    for(int i=0;i<n+1;i++)
+    {
+        for(int j=0;j<n+1;j++)
+        {
+            if(ch[i][j]=='C')
+            {
+                if(ch[i-1][j]=='C')
+                    count+=2;
+
+
+                if(ch[i][j-1]=='C')
+                    count+=2;
+            }
+        }
+    }
 
 
 
@@ -34,4 +63,5 @@ int main()
 
     return 0;
 }
+
 

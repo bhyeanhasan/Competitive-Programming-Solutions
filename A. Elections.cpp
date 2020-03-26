@@ -22,16 +22,35 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
-
-    ll n,t,count=0,sum=0,result,i,j,k;
+    int n,sum=0;
     bool is;
     string s;
 
+    cin>>n;
+
+    int arr[n];
+
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        sum+=arr[i];
+    }
+
+    int *x;
+    x =  max_element(arr,arr+n);
+
+    int p = *x;
 
 
 
+    while(((n*p)-sum) <= sum)
+    {
+        p++;
+    }
+    cout<<p<<endl;
 
 
     return 0;
 }
+
 

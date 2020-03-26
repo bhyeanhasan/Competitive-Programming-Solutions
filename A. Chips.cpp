@@ -27,6 +27,19 @@ int main()
     bool is;
     string s;
 
+    cin>>n>>t;
+
+    i=1;
+
+    while(t>=i)
+    {
+        t-=i;
+        i++;
+
+        i= i%(n+1);
+    }
+
+    cout<<t<<endl;
 
 
 
@@ -34,4 +47,5 @@ int main()
 
     return 0;
 }
+
 

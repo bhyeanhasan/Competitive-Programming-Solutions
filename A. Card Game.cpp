@@ -12,8 +12,7 @@
 #define vc vector<ll>
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
-#define fr(n) for(ll i=0;i<n;i++)
-bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
+#define fr(i,n) for(ll i=0;i<n;i++)
 
 
 using namespace std;
@@ -27,42 +26,45 @@ int main()
     bool is;
     string s;
 
-    cin>>n;
+    cin>>t;
 
-    ll arr[n];
-
-    for(i=0;i<n;i++)
+    while(t--)
     {
-        cin>>arr[i];
+        ll first,second;
+        cin>>n>>first>>second;
+        ll arr1[first],arr2[second];
 
-        is = false;
+        ll one=-1,two=0;
 
-        t = sqrt(arr[i]);
-
-        if(t*t == arr[i] && arr[i]%2 != 0)
-        {
-
-            for(j=3;j*j<t;j+=2)
+        for(ll i=0;i<first;i++){
+            cin>>arr1[i];
+            if(one<arr1[i])
             {
-                if( t%j == 0 )
-                {
-                    is = false;
-                    break;
-                }
-
-                is = true;
-
+                two=1;
+                one=arr1[i];
             }
         }
-        if(is || arr[i]==4 || arr[i]==9)
+        for(ll i=0;i<second;i++){
+            cin>>arr2[i];
+            if(one<arr2[i])
+            {
+                two=2;
+                one=arr2[i];
+            }
+        }
+
+
+
+
+        if(two==1)
             cout<<"YES"<<endl;
         else
             cout<<"NO"<<endl;
 
 
 
-}
- return 0;
-}
+    }
 
+    return 0;
+}
 

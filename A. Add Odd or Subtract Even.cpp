@@ -23,14 +23,41 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
+    ll n,t,count=0,sum=0,result,i,a,b,j,k;
     bool is;
     string s;
 
+    cin>>n;
+
+    while(n--)
+    {
 
 
+    cin>>a>>b;
+
+    if(a<b)
+    {
+        if((b-a)%2==1)
+        {
+            cout<<1<<endl;
+        }
+        else
+            cout<<2<<endl;
+    }
+    else if(b<a)
+    {
+        if((a-b)%2==1)
+        {
+            cout<<2<<endl;
+        }
+        else
+            cout<<1<<endl;
+    }
+    else
+        cout<<0<<endl;
 
 
+    }
 
     return 0;
 }

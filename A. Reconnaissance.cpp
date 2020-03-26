@@ -27,11 +27,37 @@ int main()
     bool is;
     string s;
 
+    cin>>n>>k;
+    ll arr[n];
+
+    fr(i,n)
+    cin>>arr[i];
+
+    sort(arr,arr+n);
+
+    for(j=0;j<n;j++)
+    {
 
 
+    for(i=j+1;i<n;i++)
+    {
+        if(arr[i]-arr[j]<=k)
+        {
+            sum+=2;
+        }
+        else
+        {
+            continue;
+        }
+
+    }
+    }
+
+cout<<sum<<endl;
 
 
 
     return 0;
 }
+
 

@@ -23,10 +23,41 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
+    ll n,t,count=0,sum1=0,sum2=0,sum3=0,result,i,j,k;
     bool is;
     string s;
 
+    cin>>n;
+
+    while(n--)
+    {
+        cin>>k;
+        if(k==25)
+        {
+            sum1++;
+        }
+        if(k==50)
+        {
+            sum2++;
+            sum1--;
+        }
+        if(k==100)
+        {
+            sum1--;
+            sum2--;
+            if(sum2<0 && sum1>=2)
+            {
+                sum1-=2;
+                sum2++;
+            }
+        }
+        if(sum1<0 || sum2<0){
+            cout<<"NO"<<endl;
+            return 0;
+        }
+    }
+
+    cout<<"YES"<<endl;
 
 
 
@@ -34,4 +65,5 @@ int main()
 
     return 0;
 }
+
 

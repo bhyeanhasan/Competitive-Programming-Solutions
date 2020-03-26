@@ -27,11 +27,41 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
+
+        char arr[n][n];
+
+        fr(i,n)
+        {
+            fr(j,n)
+            {
+                cin>>arr[i][j];
+            }
+        }
 
 
+        if(n<=2){
+        cout<<0<<endl;
+        return 0;
+        }
 
+        for(i=1;i<n-1;i++)
+        {
+            for(j=1;j<n-1;j++)
+            {
+                if(arr[i][j]=='X')
+                {
+                    if(arr[i-1][j-1]=='X' && arr[i-1][j+1]=='X' && arr[i+1][j+1]=='X' && arr[i+1][j-1]=='X')
+                    {
+                        count++;
+                    }
+                }
+            }
+        }
 
+        cout<<count<<endl;
 
     return 0;
 }
+
 

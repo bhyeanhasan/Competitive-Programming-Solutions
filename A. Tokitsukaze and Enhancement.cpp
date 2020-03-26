@@ -1,39 +1,53 @@
+/*
+    Md Babul Hasan (Noyen)
+    Patuakhali Science and Technology University
+    Faculty of Computer Science and Engineering
+    16 th Batch (PSTU-CSE-2019)
+    bhyean@gmail.com // B H Yean Hasan
+*/
+
 #include<bits/stdc++.h>
+#define ll long long int
+#define pi acos(-1)
+#define vc vector<ll>
+#define in(a) scanf("%d",&a)
+#define srt(a) sort(a.begin(),a.end())
+#define fr(i,n) for(ll i=0;i<n;i++)
+bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
+
+
 using namespace std;
 
 int main()
 {
-    int x;
-    char v;
-    cin>>x;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);cout.tie(0);
 
-    int y=x%4;
+    ll n,t,count=0,sum=0,result,i,j,k;
+    bool is;
+    string s;
 
-    if(y==1)
-    {
-        v='A';
-    }
-    else if(y==2)
-    {
-        v=='C';
-    }
-    else if(y==3)
-    {
-        v=='B';
-    }
-    else if(y==0)
-    {
-        v=='D';
-    }
+    cin>>n;
 
-    int vv;
 
-    switch(v)
+    if(n%4==1)
     {
-        case 'A': vv=0;
-        break;
-        case 'B': vv=
+        cout<<0<<" "<<"A"<<endl;
+    }
+    else if(n%4==3)
+    {
+        cout<<2<<" "<<"A"<<endl;
+    }
+    else if(n%4==0)
+    {
+        cout<<1<<" "<<"A"<<endl;
+    }
+    else
+    {
+        cout<<1<<" "<<"B"<<endl;
     }
 
 
+    return 0;
 }
+

@@ -27,11 +27,35 @@ int main()
     bool is;
     string s;
 
+cin>>k;
+while(k--){
+        cin>>n;
+
+        ll arr[n],brr[n];
+
+        fr(i,n)
+        cin>>arr[i];
+
+        sort(arr,arr+n);
+
+        fr(i,n)
+        cin>>brr[i];
 
 
+        sort(brr,brr+n);
+
+        fr(i,n)
+        cout<<arr[i]<<" ";
+        cout<<endl;
+
+        fr(i,n)
+        cout<<brr[i]<<" ";
+        cout<<endl;
+    }
 
 
 
     return 0;
 }
+
 

@@ -27,11 +27,32 @@ int main()
     bool is;
     string s;
 
+    cin>>t;
 
+    while(t--)
+    {
+        cin>>n>>result;
+        ll arr[n];
+        sum=0;
+        fr(i,n){
+        cin>>arr[i];
+        sum+=arr[i];
+        }
+
+        if(n==1)
+            cout<<arr[0]<<endl;
+        else if(sum>=result)
+            cout<<result<<endl;
+        else
+        {
+            cout<<sum%(result)<<endl;
+        }
+    }
 
 
 
 
     return 0;
 }
+
 

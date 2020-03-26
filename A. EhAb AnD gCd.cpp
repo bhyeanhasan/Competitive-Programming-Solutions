@@ -26,7 +26,16 @@ int main()
     ll n,t,count=0,sum=0,result,i,j,k;
     bool is;
     string s;
+    cin>>n;
 
+    while(n--)
+    {
+        cin>>t;
+        ll lcm=1;
+        ll gcd = t-1;
+
+        cout<<lcm<<" "<<gcd<<endl;
+    }
 
 
 

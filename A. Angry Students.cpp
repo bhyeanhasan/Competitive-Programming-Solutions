@@ -23,15 +23,49 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
+    ll n,t,count=0,sum=0,result,Max=0,i,j,k,l;
     bool is;
     string s;
 
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
 
 
+    cin>>s;
+    l= s.size();
 
+    for(i=0;i<l;i++)
+    {
+        if(s[i]=='A' && i!=l-1)
+        {
 
+            //cout<<i<<endl;
+
+            for(j=i+1;j<l;j++)
+            {
+                if(s[j]=='P'){
+                       // cout<<j<<endl;
+                    count++;
+                }
+                else
+                    break;
+            }
+            if(count>Max)
+            {
+                Max=count;
+            }
+            count=0;
+        }
+    }
+
+    cout<<Max<<endl;
+    Max=0;
+
+    }
 
     return 0;
 }
+
 

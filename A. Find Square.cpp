@@ -23,15 +23,40 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
+    ll n,t,count=0,sum=0,result,i,j,k,r,c,m,nn;
     bool is;
     string s;
 
+    cin>>n>>t;
 
+    char arr[n][t];
 
+    fr(i,n)
+    {
+        fr(j,t)
+        {
+            cin>>arr[i][j];
+            if(arr[i][j]=='B')
+            {
+                if(count==0)
+                {
+                    r=i+1;
+                    c=j+1;
+                }
+                count++;
+
+                m=i+1;
+                nn=j+1;
+
+            }
+        }
+    }
+
+    cout<<(r+m)/2<<" "<<(c+nn)/2<<endl;
 
 
 
     return 0;
 }
+
 

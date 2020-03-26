@@ -28,10 +28,37 @@ int main()
     string s;
 
 
+    cin>>n>>t;
 
+    if(n<=t)
+    {
+        cout<<1<<endl;
+        return 0;
+    }
+    ll arr[n+1];
+    ll Min =99999999;
+    arr[0]=0;
 
+   for(i=1;i<=n;i++)
+   {
+       cin>>arr[i];
+       arr[i]=arr[i]+arr[i-1];
+   }
+
+    for(i=t;i<=n;i++)
+    {
+
+        if(Min>arr[i]-arr[i-t])
+        {
+            Min=arr[i]-arr[i-t];
+            k=i;
+        }
+    }
+
+    cout<<k-t+1<<endl;
 
 
     return 0;
 }
+
 

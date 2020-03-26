@@ -27,11 +27,31 @@ int main()
     bool is;
     string s;
 
+    cin>>t;
 
+    ll x,y,x1,y1;
+
+    while(t--)
+    {
+        cin>>x>>y>>x1>>y1;
+        x1+=1;
+        y1+=1;
+
+
+        ll a =(x-x1)*y;
+        ll b =(y-y1)*x;
+        ll c =(x-(x-x1)-1)*y;
+        ll d =(y-(y-y1)-1)*x;
+
+        result = max(a,max(b,max(c,d)));
+
+        cout<<result<<endl;
+    }
 
 
 
 
     return 0;
 }
+
 

@@ -27,6 +27,24 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
+
+    ll arr[n];
+
+    fr(i,n)
+        cin>>arr[i];
+
+    sort(arr,arr+n);
+
+
+    cin>>t;
+
+    while(t--)
+    {
+        cin>>k;
+
+        cout<<upper_bound(arr,arr+n,k)-arr<<endl;
+    }
 
 
 
@@ -34,4 +52,5 @@ int main()
 
     return 0;
 }
+
 

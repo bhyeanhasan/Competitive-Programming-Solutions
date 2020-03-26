@@ -27,7 +27,16 @@ int main()
     bool is;
     string s;
 
+    cin>>t;
 
+    while(t--)
+    {
+        cin>>i>>j;
+        if(i%j==0)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+    }
 
 
 

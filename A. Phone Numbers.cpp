@@ -27,10 +27,16 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
+    cin>>s;
 
+    fr(i,n)
+    {
+        if(s[i]=='8')
+            count++;
+    }
 
-
-
+    cout<<min(count,n/11)<<endl;
 
     return 0;
 }

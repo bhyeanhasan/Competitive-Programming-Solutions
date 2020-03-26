@@ -13,7 +13,6 @@
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
-bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
 
 
 using namespace std;
@@ -23,15 +22,36 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
-    ll n,t,count=0,sum=0,result,i,j,k;
-    bool is;
-    string s;
+    ll t,n,good,bad;
+
+    cin>>t;
+
+    while(t--)
+    {
+        cin>>n>>good>>bad;
+
+        ll time = good+bad;
+        ll goodRoad = (n+1)/2;
+
+        ll day = (goodRoad/good)*time;
+
+        if(goodRoad%good == 0)
+        {
+            day = day-bad; // time hocce good+bad tai %==0 hole ekhane bad extra
+        }
+        else
+        {
+            day=day + (goodRoad%good);
+        }
+
+        cout<<max(n,day)<<endl; // goodRoad n din age hole e hobe na karon baki road o complete korte hobe
 
 
-
+    }
 
 
 
     return 0;
 }
+
 

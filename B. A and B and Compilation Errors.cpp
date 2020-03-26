@@ -12,7 +12,7 @@
 #define vc vector<ll>
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
-#define fr(i,n) for(ll i=0;i<n;i++)
+#define fr(n) for(ll i=0;i<n;i++)
 bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
 
 
@@ -27,6 +27,45 @@ int main()
     bool is;
     string s;
 
+    cin>>n;
+    ll arr[n],brr[n-1],crr[n-2];
+
+    fr(n)
+    cin>>arr[i];
+
+    sort(arr,arr+n);
+
+    fr(n-1)
+    cin>>brr[i];
+
+    sort(brr,brr+n-1);
+
+    fr(n-2)
+    cin>>crr[i];
+
+    sort(crr,crr+n-2);
+
+    j=arr[n-1];
+    k=brr[n-2];
+
+    fr(n-1)
+    {
+        if(arr[i] != brr[i]){
+        j=arr[i];
+        break;
+        }
+    }
+
+    fr(n-2)
+    {
+        if(brr[i] != crr[i]){
+        k=brr[i];
+        break;
+        }
+    }
+
+    cout<<j<<endl;
+    cout<<k<<endl;
 
 
 
@@ -34,4 +73,5 @@ int main()
 
     return 0;
 }
+
 
