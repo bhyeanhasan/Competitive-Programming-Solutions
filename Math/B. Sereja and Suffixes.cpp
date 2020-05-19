@@ -49,30 +49,46 @@
 using namespace std;
     string sss;
     ll input(){ll x; cin>>x; return x;}
-
+    void show(ll ar[], ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    void show(vector<ll> ar, ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    //string toString(__int128 num) { string str; do { int digit = num % 10; str = std::to_string(digit) + str; num = (num - digit) / 10;} while (num != 0);return str;}
+    void bin(ll x){if(x>1)bin(x/2);sss = sss + to_string(x%2);}
+    void oct(ll x){if(x>1)oct(x/8);sss = sss + to_string(x%8);}
+    void hex(ll x){ ll o; if(x>1) hex(x/16); o = x%16;if(o==10) sss = sss +"A";else if(o==11) sss = sss +"B";else if(o==12) sss = sss +"C"; else if(o==13) sss = sss +"D";else if(o==14)sss = sss +"E";else if(o==15)sss = sss +"F";else sss = sss + to_string(o);}
+    string decToBin(ll x){sss="";bin(x);return sss;}
+    string decToOct(ll x){sss="";oct(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin());return sss;}
+    string decToHex(ll x){sss="";hex(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin()); return sss;}
 
 
 int main()
 {
     By_NoYoN;
     NoYoN_Variables;
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
     //tc
 {
 /*===========================================================================================*/
-    cin>>n>>a>>b>>c;
+    cin>>n>>t;
 
-    for(i=0;i*a<=n;i++)
+    set<ll> st;
+
+    ll arr[n];
+    fr(i,n)
+    cin>>arr[i];
+
+    for(i=n-1;i>=0;i--)
     {
-        for(j=0;j*b<=n;j++)
-        {
-            x = (n-((i*a)+(j*b)))/c;
-
-            if(i*a+j*b+x*c == n)
-                sum = max(sum,(i+j+x));
-        }
+        st.insert(arr[i]);
+        arr[i] = st.size();
     }
 
-    print(sum);
+    while(t--)
+    {
+        cin>>x;
+
+        print(arr[x-1]);
+    }
 /*===========================================================================================*/
 } return 0; }
 

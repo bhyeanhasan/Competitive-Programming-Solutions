@@ -29,6 +29,8 @@
     #define lcm(a, b) (((a)/gcd(a,b))*b)
     #define fil(arr,value) memset(arr,value,arr.size())
     #define vfill(v,value)  v.assign(v.size(),value)
+    #define rev(v) reverse( v.begin(), v.end())
+    #define PERMUTE next_permutation
     #define ll long long int
     #define LN __int128
     #define Max LONG_LONG_MAX
@@ -45,36 +47,36 @@
     #define tc ll test = input(); for(ll T=1;T<=test;T++)
     #define NoYoN_Variables ll n,a,b,c,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
     #define By_NoYoN ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
+    #define IN freopen("input.txt", "r", stdin);
+    #define OUT freopen("output.txt", "w", stdout);
 
 using namespace std;
     string sss;
     ll input(){ll x; cin>>x; return x;}
-
-
+    void show(ll ar[], ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    void show(vector<ll> ar, ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
 
 int main()
 {
     By_NoYoN;
     NoYoN_Variables;
-    //tc
+
+    tc
 {
 /*===========================================================================================*/
-    cin>>n>>a>>b>>c;
 
-    for(i=0;i*a<=n;i++)
-    {
-        for(j=0;j*b<=n;j++)
-        {
-            x = (n-((i*a)+(j*b)))/c;
+    cin>>a>>b;
 
-            if(i*a+j*b+x*c == n)
-                sum = max(sum,(i+j+x));
-        }
-    }
+    x = b/(a-1)+b;
 
-    print(sum);
+    if(x%a==0)
+        x--;
+
+    print(x);
+
 /*===========================================================================================*/
 } return 0; }
+
 
 
 

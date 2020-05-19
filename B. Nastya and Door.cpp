@@ -43,12 +43,21 @@
     #define yes cout<<"YES"<<endl
     #define no cout<<"NO"<<endl
     #define tc ll test = input(); for(ll T=1;T<=test;T++)
-    #define NoYoN_Variables ll n,a,b,c,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
+    #define NoYoN_Variables ll x,sum=0,t=0,count=0,a,b,c,flag=0,i,j,k,m,n,o; string s,s1,s2,s3; bool is = false; double Sum=0;
     #define By_NoYoN ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
 
 using namespace std;
     string sss;
     ll input(){ll x; cin>>x; return x;}
+    void show(ll ar[], ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    void show(vector<ll> ar, ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    //string toString(__int128 num) { string str; do { int digit = num % 10; str = std::to_string(digit) + str; num = (num - digit) / 10;} while (num != 0);return str;}
+                                                                            void bin(ll x){if(x>1)bin(x/2);sss = sss + to_string(x%2);}
+                                                                            void oct(ll x){if(x>1)oct(x/8);sss = sss + to_string(x%8);}
+                                                                            void hex(ll x){ ll o; if(x>1) hex(x/16); o = x%16;if(o==10) sss = sss +"A";else if(o==11) sss = sss +"B";else if(o==12) sss = sss +"C"; else if(o==13) sss = sss +"D";else if(o==14)sss = sss +"E";else if(o==15)sss = sss +"F";else sss = sss + to_string(o);}
+    string decToBin(ll x){sss="";bin(x);return sss;}
+    string decToOct(ll x){sss="";oct(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin());return sss;}
+    string decToHex(ll x){sss="";hex(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin()); return sss;}
 
 
 
@@ -56,25 +65,51 @@ int main()
 {
     By_NoYoN;
     NoYoN_Variables;
-    //tc
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+    tc
 {
 /*===========================================================================================*/
-    cin>>n>>a>>b>>c;
+    cin>>n>>x;
 
-    for(i=0;i*a<=n;i++)
+    ll arr[n+10],brr[n+5];
+
+    for(i=1;i<=n;i++)
+        cin>>arr[i];
+
+    memset(brr,0,sizeof(brr));
+    for(i=2;i<n;i++)
     {
-        for(j=0;j*b<=n;j++)
-        {
-            x = (n-((i*a)+(j*b)))/c;
+        if(arr[i]>arr[i-1] && arr[i]>arr[i+1])
+            count++;
+        brr[i]=count;
+    }
 
-            if(i*a+j*b+x*c == n)
-                sum = max(sum,(i+j+x));
+    k=1;
+
+    for(i=1;i<=n-x+1;i++)
+    {
+        flag = brr[i+x-2]-brr[i];
+
+        if(flag > sum)
+        {
+            sum = flag;
+            k = i;
         }
     }
 
-    print(sum);
+    cout<<sum+1<<" "<<k<<endl;
+    sum=0; count=0;
 /*===========================================================================================*/
-} return 0; }
+} return 0;}
+
+
+
+
+
+
+
+
 
 
 

@@ -1,63 +1,123 @@
-/*
-    Md Babul Hasan (Noyen)
-    Patuakhali Science and Technology University
-    Faculty of Computer Science and Engineering
-    16 th Batch (PSTU-CSE-2019)
-    bhyean@gmail.com // B H Yean Hasan
-*/
-
-#include<bits/stdc++.h>
-#define ll long long int
-#define pi acos(-1)
-#define vc vector<ll>
-#define in(a) scanf("%d",&a)
-#define srt(a) sort(a.begin(),a.end())
-
+/**===========================================================================================
+                                B H Yean Hasan (NoYoN)
+                    Patuakhali Science and Technology University
+                     Faculty of Computer Science and Engineering
+                      bhyean16@cse.pstu.ac.bd /bhyean@gmail.com
+/*===========================================================================================**/
+/*============================================
+    Duplicate line 	    Ctrl + D
+    Auto -complete	    Ctrl + Space
+    Abbreviations       Ctrl + J
+    Swap line above 	Ctrl + T
+    Recent files.	    Ctrl + Tab
+    Indent/Dedent		Tab/Shift + Tab
+    Line cut.	        Ctrl + L
+    Line copy.      	Ctrl + Shift + c
+    Line delete.	    Ctrl + Shift + L
+    move line           Alt+up/Alt+down
+/*=============================================*/
+    #include<bits/stdc++.h>
+    #define pi acos(-1)
+    #define binaryToDecimal(str) stoi(str,nullptr,2)
+    #define octalToDecimal(str) stoi(str,nullptr,8)
+    #define hexaToDecimal(str) stoi(str,nullptr,16)
+    #define even(i) (!(i & 1))
+    #define odd(i) (i & 1)
+    #define SQ(a) ((a)*(a))
+    #define QU(a) ((a)*(a)*(a))
+    #define gcd(a, b) __gcd(a,b)
+    #define lcm(a, b) (((a)/gcd(a,b))*b)
+    #define fil(arr,value) memset(arr,value,arr.size())
+    #define vfill(v,value)  v.assign(v.size(),value)
+    #define ll long long int
+    #define LN __int128
+    #define Max LONG_LONG_MAX
+    #define Min LONG_LONG_MIN
+    #define vc vector<ll>
+    #define pb(x) push_back(x)
+    #define in(a) scanf("%lld",&a)
+    #define point(x,d) cout<<fixed<<setprecision(d)<<x
+    #define print(x) cout<<x<<endl
+    #define srt(a) sort(a.begin(),a.end())
+    #define fr(i,n) for(ll i=0;i<n;i++)
+    #define yes cout<<"YES"<<endl
+    #define no cout<<"NO"<<endl
+    #define tc ll test = input(); for(ll T=1;T<=test;T++)
+    #define NoYoN_Variables ll n,a,b,c,x,y,z,i,j,k,o,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
+    #define By_NoYoN ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
 
 using namespace std;
+    string sss;
+    ll input(){ll x; cin>>x; return x;}
+    void show(ll ar[], ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    void show(vector<ll> ar, ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    //string toString(__int128 num) { string str; do { int digit = num % 10; str = std::to_string(digit) + str; num = (num - digit) / 10;} while (num != 0);return str;}
+    void bin(ll x){if(x>1)bin(x/2);sss = sss + to_string(x%2);}
+    void oct(ll x){if(x>1)oct(x/8);sss = sss + to_string(x%8);}
+    void hex(ll x){ ll o; if(x>1) hex(x/16); o = x%16;if(o==10) sss = sss +"A";else if(o==11) sss = sss +"B";else if(o==12) sss = sss +"C"; else if(o==13) sss = sss +"D";else if(o==14)sss = sss +"E";else if(o==15)sss = sss +"F";else sss = sss + to_string(o);}
+    string decToBin(ll x){sss="";bin(x);return sss;}
+    string decToOct(ll x){sss="";oct(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin());return sss;}
+    string decToHex(ll x){sss="";hex(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin()); return sss;}
+
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);cout.tie(0);
-
-    ll a,b,c,d,n,t,count=0,sum=0,result,x,xx,i,j,k;
-    bool is=false;
-    string s;
-
+    By_NoYoN;
+    NoYoN_Variables;
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+    //tc
+{
+/*===========================================================================================*/
     cin>>n;
-    ll v[n];
+    ll arr[n];
 
-    for(ll i=0;i<n;i++)
-        cin>>v[i];
-
-    sort(v,v+n);
-    xx=v[n-1];
-    x=v[0];
-    for(i=x ; i<=xx ; i++)
+    set<ll> st;
+    vc v;
+    fr(i,n)
     {
-        for(j=0;j<n;j++)
-        {
-            if(v[j]!=0 && v[j]%i==0)
-            {
-                v[j]=0;
-                is=true;
+        cin>>o;
+        st.insert(o);
+    }
 
+    for( auto x : st)
+    {
+        v.push_back(x);
+    }
+
+    srt(v);
+
+    v.push_back(-1);
+
+    //show(v,0,v.size());
+
+    fr(i,v.size()-1)
+    {
+        for(j=i+1;j<v.size();j++)
+        {
+            if(v[j] != -1 && v[i]!=-1)
+            {
+                if(v[j]%v[i]==0)
+                {
+                    v[j]=-1;
+                    is = true;
+                }
             }
+
+        }
+        if(v[i] != -1){
+        v[i]=-1;
+        count++;
         }
 
-        if(is==true)
-            {
-                count++;
-                is=false;
-            }
-
-
-
     }
-    cout<<count;
 
-    return 0;
-}
+
+    print(count);
+
+/*===========================================================================================*/
+} return 0; }
+
+
 
 

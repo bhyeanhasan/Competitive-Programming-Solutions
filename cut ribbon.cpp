@@ -63,7 +63,7 @@ int main()
 
     for(i=0;i*a<=n;i++)
     {
-        for(j=0;j*b<=n;j++)
+        for(j=0;j*b+ i*a<=n;j++)
         {
             x = (n-((i*a)+(j*b)))/c;
 

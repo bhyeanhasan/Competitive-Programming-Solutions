@@ -43,12 +43,20 @@
     #define yes cout<<"YES"<<endl
     #define no cout<<"NO"<<endl
     #define tc ll test = input(); for(ll T=1;T<=test;T++)
-    #define NoYoN_Variables ll n,a,b,c,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
+    #define NoYoN_Variables ll x,sum=0,t=0,count=0,a,b,c,flag=0,i,j,k,m,n,o; string s,s1,s2,s3; bool is = false; double Sum=0;
     #define By_NoYoN ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
 
 using namespace std;
     string sss;
     ll input(){ll x; cin>>x; return x;}
+    void show(ll ar[], ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+    void show(vector<ll> ar, ll first, ll last){for(ll i=first; i<last; i++){cout << ar[i] << " ";}cout<<endl;}
+                                                                            void bin(ll x){if(x>1)bin(x/2);sss = sss + to_string(x%2);}
+                                                                            void oct(ll x){if(x>1)oct(x/8);sss = sss + to_string(x%8);}
+                                                                            void hex(ll x){ ll o; if(x>1) hex(x/16); o = x%16;if(o==10) sss = sss +"A";else if(o==11) sss = sss +"B";else if(o==12) sss = sss +"C"; else if(o==13) sss = sss +"D";else if(o==14)sss = sss +"E";else if(o==15)sss = sss +"F";else sss = sss + to_string(o);}
+    string decToBin(ll x){sss="";bin(x);return sss;}
+    string decToOct(ll x){sss="";oct(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin());return sss;}
+    string decToHex(ll x){sss="";hex(x);if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin()); return sss;}
 
 
 
@@ -56,25 +64,54 @@ int main()
 {
     By_NoYoN;
     NoYoN_Variables;
-    //tc
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+    tc
 {
 /*===========================================================================================*/
-    cin>>n>>a>>b>>c;
-
-    for(i=0;i*a<=n;i++)
+    cin>>s;
+    flag = 1;
+    for(i=0;i<s.size()-1;i++)
     {
-        for(j=0;j*b<=n;j++)
+        if(s[i] != s[i+1])
         {
-            x = (n-((i*a)+(j*b)))/c;
-
-            if(i*a+j*b+x*c == n)
-                sum = max(sum,(i+j+x));
+            flag = 0;
+            break;
         }
     }
+    if(flag ==1)
+    {
+        cout<<s<<endl;
+    }
+    else
+    {
+        for(i=0;i<s.size()-1;i++)
+        {
+            if(s[i]=='1' && s[i+1] == '1')
+            {
+                s1 += "10";
+            }
+            else if(s[i]=='0' && s[i+1]=='0')
+            {
+                s1+= "01";
+            }
+            else
+                s1+=s[i];
+        }
+        s1 += s[s.size()-1];
+        cout<<s1<<endl;
+    }
 
-    print(sum);
+    s1="";
 /*===========================================================================================*/
-} return 0; }
+} return 0;}
+
+
+
+
+
+
+
 
 
 
