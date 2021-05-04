@@ -23,6 +23,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
+<<<<<<< Updated upstream
     ll n,t,count=0,sum=0,result,i,a,b,j,k;
     bool is;
     string s;
@@ -55,6 +56,43 @@ int main()
     }
     else
         cout<<0<<endl;
+=======
+    ll n,t,count=0,sum=0,result,i,j,k;
+    bool is;
+    string s;
+
+    cin>>k;
+    while(k--)
+    {
+
+    cin>>t>>j;
+
+    n=abs(j-t);
+
+    if(n==0){
+        cout<<0<<endl;
+    }
+    else if(t<j){
+    if(n%2==0)
+    {
+        cout<<2<<endl;
+    }
+    else{
+        cout<<1<<endl;
+    }
+    else
+    {
+        if(n%2==0)
+    {
+        cout<<1<<endl;
+    }
+    else{
+        cout<<2<<endl;
+    }
+
+    }
+
+>>>>>>> Stashed changes
 
 
     }

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /**===========================================================================================
                                 B H Yean Hasan (NoYoN)
                     Patuakhali Science and Technology University
@@ -45,12 +46,37 @@
     #define tc ll test = input(); for(ll T=1;T<=test;T++)
     #define NoYoN_Variables ll n,a,b,c,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
     #define By_NoYoN ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
+=======
+/*
+    Md Babul Hasan (Noyen)
+    Patuakhali Science and Technology University
+    Faculty of Computer Science and Engineering
+    16 th Batch (PSTU-CSE-2019)
+    bhyean@gmail.com // B H Yean Hasan
+*/
+
+#include<bits/stdc++.h>
+#define ll long long int
+#define pi acos(-1)
+#define vc vector<ll>
+#define in(a) scanf("%d",&a)
+#define srt(a) sort(a.begin(),a.end())
+#define fr(n) for(ll i=0;i<n;i++)
+bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
+
+>>>>>>> Stashed changes
 
 using namespace std;
     string sss;
     ll input(){ll x; cin>>x; return x;}
 
 
+<<<<<<< Updated upstream
+=======
+    ll n,t,count=0,sum=0,result,i,j,k;
+    bool is;
+    string s;
+>>>>>>> Stashed changes
 
 int main()
 {
@@ -60,13 +86,17 @@ int main()
 {
 /*===========================================================================================*/
     cin>>n;
-    ll arr[n];
 
+<<<<<<< Updated upstream
     fr(i,n)
         cin>>arr[i];
+=======
+    ll arr[n];
+>>>>>>> Stashed changes
 
-    fr(i,n)
+    for(i=0;i<n;i++)
     {
+<<<<<<< Updated upstream
         x= sqrt(arr[i]);
         for(j=2;j*j<=x;j++)
         {
@@ -83,6 +113,41 @@ int main()
 
 /*===========================================================================================*/
 } return 0; }
+=======
+        cin>>arr[i];
+
+        is = false;
+
+        t = sqrt(arr[i]);
+
+        if(t*t == arr[i] && arr[i]%2 != 0)
+        {
+>>>>>>> Stashed changes
+
+            for(j=3;j*j<t;j+=2)
+            {
+                if( t%j == 0 )
+                {
+                    is = false;
+                    break;
+                }
+
+                is = true;
+
+<<<<<<< Updated upstream
+=======
+            }
+        }
+        if(is || arr[i]==4 || arr[i]==9)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
 
 
 
+}
+ return 0;
+}
+
+
+>>>>>>> Stashed changes

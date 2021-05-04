@@ -13,13 +13,17 @@
 #define in(a) scanf("%d",&a)
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
+<<<<<<< Updated upstream
 bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
+=======
+>>>>>>> Stashed changes
 
 
 using namespace std;
 
 int main()
 {
+<<<<<<< Updated upstream
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
 
@@ -53,6 +57,45 @@ int main()
     }
 
 
+=======
+    int n;
+    cin>>n;
+
+    while(n--)
+    {
+
+        int k,count=1;
+        cin>>k;
+
+        int arr[k];
+
+        for(int i=0;i<k;i++)
+            cin>>arr[i];
+
+        sort(arr,arr+k);
+
+        for(int i=k-1;i>=0;i--)
+        {
+            count=1;
+
+            for(int j=0;j<k;j++)
+            {
+                if(arr[i]>=k-j)
+                {
+                    count=k-j;
+                }
+                else
+                    break;
+            }
+
+
+
+
+        }
+        cout<<count<<endl;
+    }
+
+>>>>>>> Stashed changes
 
     return 0;
 }
