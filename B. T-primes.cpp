@@ -72,7 +72,10 @@ using namespace std;
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     ll n,t,count=0,sum=0,result,i,j,k;
     bool is;
     string s;
@@ -87,6 +90,7 @@ int main()
 /*===========================================================================================*/
     cin>>n;
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     fr(i,n)
         cin>>arr[i];
@@ -136,6 +140,31 @@ int main()
 
 <<<<<<< Updated upstream
 =======
+=======
+    ll arr[n];
+
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+
+        is = false;
+
+        t = sqrt(arr[i]);
+
+        if(t*t == arr[i] && arr[i]%2 != 0)
+        {
+
+            for(j=3;j*j<t;j+=2)
+            {
+                if( t%j == 0 )
+                {
+                    is = false;
+                    break;
+                }
+
+                is = true;
+
+>>>>>>> Stashed changes
             }
         }
         if(is || arr[i]==4 || arr[i]==9)

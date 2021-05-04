@@ -14,7 +14,10 @@
 #define srt(a) sort(a.begin(),a.end())
 #define fr(i,n) for(ll i=0;i<n;i++)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 bool isprime(ll n){if(n < 2) return 0; ll i = 2; while(i*i <= n){if(n%i == 0) return 0; i++;} return 1;}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -23,6 +26,7 @@ using namespace std;
 
 int main()
 {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
@@ -58,6 +62,8 @@ int main()
 
 
 =======
+=======
+>>>>>>> Stashed changes
     int n;
     cin>>n;
 
@@ -95,6 +101,9 @@ int main()
         cout<<count<<endl;
     }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     return 0;

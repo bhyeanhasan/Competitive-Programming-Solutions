@@ -3,6 +3,7 @@
                     Patuakhali Science and Technology University
                      Faculty of Computer Science and Engineering
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                       bhyean16@cse.pstu.ac.bd /bhyean@gmail.com
 /*===========================================================================================**/
 /*============================================
@@ -75,6 +76,8 @@ int main()
 
     print(ch);
 =======
+=======
+>>>>>>> Stashed changes
 /*===========================================================================================**/
 /*============================================
     move line           Alt+up/Alt+down
@@ -125,6 +128,9 @@ int main()
 
 print("bh");
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 /*===========================================================================================*/
 } return 0; }

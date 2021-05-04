@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*
     Md Babul Hasan (Noyen)
     Patuakhali Science and Technology University
@@ -16,6 +17,8 @@
 #define fr(i,n) for(ll i=0;i<n;i++)
 
 =======
+=======
+>>>>>>> Stashed changes
 #include<bits/stdc++.h>
 
     #include<bits/stdc++.h>
@@ -44,12 +47,16 @@
     #define TEST ll test; cin>>test; for(ll T=1;T<=test;T++)
     #define START ll n,a,b,c,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0,place=-1; string s,s1,s2,s3; bool is = false; double Sum=0;
     #define READY ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 using namespace std;
 
 int main()
 {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(0);
@@ -65,6 +72,8 @@ int main()
 
 
 =======
+=======
+>>>>>>> Stashed changes
     int a,b;
     cin>>a>>b;
     vector <ll> vec;
@@ -94,13 +103,19 @@ int main()
         cout<<endl;
 
     }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
     return 0;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

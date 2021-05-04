@@ -24,6 +24,7 @@ int main()
     cin.tie(NULL);cout.tie(0);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ll n,t,count=0,sum=0,result,i,a,b,j,k;
     bool is;
     string s;
@@ -57,6 +58,8 @@ int main()
     else
         cout<<0<<endl;
 =======
+=======
+>>>>>>> Stashed changes
     ll n,t,count=0,sum=0,result,i,j,k;
     bool is;
     string s;
@@ -92,6 +95,9 @@ int main()
 
     }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
