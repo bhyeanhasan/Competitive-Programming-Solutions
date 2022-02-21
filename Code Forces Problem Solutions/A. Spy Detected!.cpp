@@ -45,7 +45,7 @@
 #define yes cout<<"YES"<<endl
 #define no cout<<"NO"<<endl
 #define tc ll test = input(); for(ll T=1;T<=test;T++)
-#define NoYoN_Variables ll n,a,b,c,m,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
+#define NoYoN_Variables ll n,a,b,c,x,y,z,i,j,k,sum=0,t=0,count=0,flag=0; string s,s1,s2,s3; bool is = false; double Sum=0;
 #define By_NoYoN ios_base::sync_with_stdio(false); cin.tie(NULL);cout.tie(0);
 
 using namespace std;
@@ -72,7 +72,50 @@ void show(vector<ll> ar, ll first, ll last)
     }
     cout<<endl;
 }
-
+//string toString(__int128 num) { string str; do { int digit = num % 10; str = std::to_string(digit) + str; num = (num - digit) / 10;} while (num != 0);return str;}
+void bin(ll x)
+{
+    if(x>1)bin(x/2);
+    sss = sss + to_string(x%2);
+}
+void oct(ll x)
+{
+    if(x>1)oct(x/8);
+    sss = sss + to_string(x%8);
+}
+void hex(ll x)
+{
+    ll o;
+    if(x>1) hex(x/16);
+    o = x%16;
+    if(o==10) sss = sss +"A";
+    else if(o==11) sss = sss +"B";
+    else if(o==12) sss = sss +"C";
+    else if(o==13) sss = sss +"D";
+    else if(o==14)sss = sss +"E";
+    else if(o==15)sss = sss +"F";
+    else sss = sss + to_string(o);
+}
+string decToBin(ll x)
+{
+    sss="";
+    bin(x);
+    return sss;
+}
+string decToOct(ll x)
+{
+    sss="";
+    oct(x);
+    if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin());
+    return sss;
+}
+string decToHex(ll x)
+{
+    sss="";
+    hex(x);
+    if(sss.size()>1 && sss[0]=='0') sss.erase(sss.begin());
+    return sss;
+}
 
 
 int main()
@@ -81,77 +124,43 @@ int main()
     NoYoN_Variables;
     //freopen("input.txt", "r", stdin);
     //freopen("output.txt", "w", stdout);
-    //tc
+    tc
     {
         /*===========================================================================================*/
-        cin>>n>>m;
-        if(m==0 && n==1)
-        {
-            cout<<0<<" "<<0<<endl;
-        }
-        else if(n*9>=m && m!=0)
-        {
-            x = m%9;
-            y = m/9;
-            a = y;
-            int ch[n];
-            int arr[n];
+            ll n;
+            cin>>n;
+            ll arr[n];
+            map<int,int> mp;
 
             for(int i=0;i<n;i++)
             {
-                if(y>0)
-                {
-                    ch[i]=9;
-                    y--;
-                }
-                else if(x>0)
-                {
-                    ch[i] =x;
-                    x=0;
-                }
-                else
-                {
-                    ch[i]=0;;
-                }
-                arr[i] = ch[i];
+                cin>>arr[i];
+                mp[arr[i]]++;
             }
 
-
-
-            if (arr[n-1]==0)
+            for(auto i :mp)
             {
-                for(int i=n-1;i>=0;i--)
+                if(i.second == 1)
                 {
-                    if(arr[i]>0)
-                    {
-                        arr[i] = arr[i]-1;
-                        break;
-                    }
+                    x = i.first;
                 }
-                arr[n-1] = 1;
             }
 
-             for(int i=n-1;i>=0;i--)
+            for(ll i=0;i<n;i++)
             {
-                cout<<arr[i];
+                if(arr[i] == x)
+                {
+                    cout<<++i<<endl;
+                    break;
+                }
             }
-            cout<<" ";
-             for(int i=0;i<n;i++)
-            {
-                cout<<ch[i];
-            }
-            cout<<endl;
 
-        }
-        else
-        {
-            cout<<-1<< " "<<-1<<endl;
-        }
+
+
         /*===========================================================================================*/
     }
 
 }
-
 
 
 

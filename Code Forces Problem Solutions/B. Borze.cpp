@@ -54,10 +54,35 @@ int main()
     NoYoN_Variables;
     //freopen("input.txt", "r", stdin);
     //freopen("output.txt", "w", stdout);
-    tc
+    //tc
     {
         /*===========================================================================================*/
+        cin>>s;
+        vector<int> vc;
 
+        for(i=0;i<s.length();i++)
+        {
+            if(s[i]== '.')
+            {
+                vc.pb(0);
+            }
+            else if(s[i+1] == '.')
+            {
+                vc.pb(1);
+                i++;
+            }
+             else
+            {
+                vc.pb(2);
+                i++;
+            }
+        }
+
+        for(auto i:vc)
+        {
+            cout<<i;
+        }
+        cout<<endl;
         /*===========================================================================================*/
     }
 
